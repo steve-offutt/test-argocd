@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   name: hello-world
 spec:
+  replicas: 5
   selector:
     matchLabels:
       app: hello-world
@@ -13,7 +14,7 @@ spec:
     spec:
       containers:
       - name: hello-world
-        image: stvoffutt/flask-hello-world:arm64
+        image: stvoffutt/flask-hello-world:1.0.1-arm64
         resources:
           limits:
             memory: "128Mi"
